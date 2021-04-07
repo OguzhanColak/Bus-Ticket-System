@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Otobüs-Bilet Otomasyonu Kullanıcı Giriş Ekranı
+    </title>
+    <link href="/resources/css/examples.css" rel="stylesheet" />
+</head>
+<body>
+    <ext-viewport>
+        <layout>
+            <ext-vboxLayout align="Middle" pack="Center" />
+        </layout>
+        <items>
+            <ext-formPanel title="Kullanıcı Girişi"
+                           width="480"
+                           frame="true"
+                           bodyPadding="18"
+                           x-defaultAnchor="100%">
+                <items>
+                    <ext-textField allowBlank="false" fieldLabel="Kullanıcı Adı" name="user" />
+                    <ext-textField allowBlank="false"
+                                   fieldLabel="Şifre"
+                                   name="pass"
+                                   inputType="Password" />
+                    <ext-checkbox fieldLabel="Beni Hatırla" name="remember" />
+                </items>
+                <buttons>
+                    <ext-button text="Giriş" />
+                </buttons>
+            </ext-formPanel>
+        </items>
+    </ext-viewport>
+</body>
+</html>
