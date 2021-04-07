@@ -8,7 +8,8 @@ namespace BusTicket.WebAdmin.Data
         {
             new NavItem("Dashboard", "Home", "dashboard"),
             new NavItem("DirectEvent", "DirectEvent", "flash_on"),
-            new NavItem("GridPanel", "GridPanel", "grid_on")
+            new NavItem("GridPanel", "GridPanel", "grid_on"),
+            new NavItem("Login", "Login", "dashboard")
         };
     }
 
