@@ -1,8 +1,10 @@
+using BusTicket.WebAdmin.Data;
 using Ext.Net;
 using Ext.Net.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,6 +29,12 @@ namespace BusTicket.WebAdmin
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<BusTicketContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("Default"));
+            });
+
             services.Configure<GzipCompressionProviderOptions>(options =>
             {
                 options.Level = System.IO.Compression.CompressionLevel.Optimal;
