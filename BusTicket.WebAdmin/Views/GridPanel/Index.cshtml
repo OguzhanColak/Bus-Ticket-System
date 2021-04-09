@@ -1,18 +1,24 @@
 ﻿@model BusTicket.WebAdmin.Models.GridPanelModel
 @{
-    ViewData["Title"] = "GridPanel";
+    ViewData["Title"] = "Seferler";
 }
 <ext-section target="Main">
     <ext-container region="Center" scrollable="true" paddingAsString="30 20 30 50">
         <items>
             <ext-gridPanel
-                title="GridPanel"
+                title="Sefer Listesi"
                 width="960"
                 height="640"
                 frame="true">
                 <store>
                     <ext-store data="Model.GridData">
                         <fields>
+                            @*<ext-numberDataField name="Otobüs No" />
+                            <ext-numberDataField name="Expedition No" />
+                            <ext-dataField name="Kalkış Şehir" />
+                            <ext-dataField name="Varış Şehir" />
+                            <ext-dateDataField name="Kalkış Vakti" dateFormat="yyyy-MM-dd hh:mm:tt" />
+                            <ext-dateDataField name="Varış Vakti" dateFormat="yyyy-MM-dd hh:mm:tt" />*@
                             <ext-dataField name="company" />
                             <ext-numberDataField name="price" />
                             <ext-numberDataField name="change" />
