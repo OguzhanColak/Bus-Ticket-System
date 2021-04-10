@@ -7,6 +7,7 @@ namespace BusTicket.WebAdmin.Entity
 {
     public class Ticket
     {
+        public int TicketId { get; set; }
         public int SeatNumber { get; set; }
         public int CustomerId { get; set; }
         public int ExpeditionId { get; set; } 
