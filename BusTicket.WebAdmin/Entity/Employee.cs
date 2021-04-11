@@ -10,7 +10,7 @@ namespace BusTicket.WebAdmin.Entity
     {
         public int EmployeeId { get; set; }
         public Grade Grade { get; set; }
-        public int ExpeditionId { get; set; }
+        public int RouteId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }

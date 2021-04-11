@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusTicket.WebAdmin.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace BusTicket.WebAdmin.Entity
     {
         public int CustomerId { get; set; }
         public int CityId { get; set; }
-        public bool Gender { get; set; }
+        public Gender Gender { get; set; }
         public DateTime Birthdate { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }

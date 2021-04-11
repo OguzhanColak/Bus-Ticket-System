@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace BusTicket.WebAdmin.Entity
 {
-    public class Expedition // Sefer
+    public class Route // Sefer
     {
-        public int ExpeditionId { get; set; }
+        public int RouteId { get; set; }
         public int DepartureCityId { get; set; } //KalkışŞehirId
         public int ArrivalCityId { get; set; } //VarışŞehirId
         public int BusId { get; set; }
