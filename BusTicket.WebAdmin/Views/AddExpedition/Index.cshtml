@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model BusTicket.WebAdmin.Models.GridPanelModel
 @{
     Layout = null;
 }
@@ -18,25 +16,45 @@
         Sefer Ekle
     </h1>
 
-    <ext-container layout="Form">
+    <ext-container layout="Form" >
         <items>
-            <ext-fieldContainer fieldLabel="Icons and Arrows">
+            <ext-fieldContainer fieldLabel="Otobüsün kalkacağı il">
                 <items>
                     <ext-segmentedButton allowToggle="false">
                         <items>
-                         
-                            <ext-button text="Menu Button">
+
+                            <ext-button text="Kalkış İli">
                                 <menu>
                                     <ext-menu plain="true">
                                         <items>
-                                            <ext-menuItem text="Menu Item 1" />
-                                            <ext-menuItem text="Menu Item 2" />
-                                            <ext-menuItem text="Menu Item 3" />
+                                            <ext-menuItem text="Edirne" onDirectClick="merhaba" />
+                                            <ext-menuItem text="İstanbul" />
+                                            <ext-menuItem text="Ankara" />
                                         </items>
                                     </ext-menu>
                                 </menu>
                             </ext-button>
-                            
+                        </items>
+                    </ext-segmentedButton>
+                </items>
+            </ext-fieldContainer>
+            
+            <ext-fieldContainer fieldLabel="Otobüsün varacağı il">
+                <items>
+                    <ext-segmentedButton allowToggle="false">
+                        <items>
+
+                            <ext-button text="Varış İli">
+                                <menu>
+                                    <ext-menu plain="true">
+                                        <items>
+                                            <ext-menuItem text="Edirne" onDirectClick="merhaba" />
+                                            <ext-menuItem text="İstanbul" />
+                                            <ext-menuItem text="Ankara" />
+                                        </items>
+                                    </ext-menu>
+                                </menu>
+                            </ext-button>
                         </items>
                     </ext-segmentedButton>
                 </items>

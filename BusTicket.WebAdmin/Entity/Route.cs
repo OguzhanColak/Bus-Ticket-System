@@ -10,6 +10,7 @@ namespace BusTicket.WebAdmin.Entity
         public int RouteId { get; set; }
         public int DepartureCityId { get; set; } //KalkışŞehirId
         public int ArrivalCityId { get; set; } //VarışŞehirId
+        public Bus Bus { get; set; }
         public int BusId { get; set; }
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime{ get; set; }
