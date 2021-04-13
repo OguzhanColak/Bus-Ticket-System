@@ -9,6 +9,7 @@ namespace BusTicket.WebAdmin.Entity
     public class Customer
     {
         public int CustomerId { get; set; }
+        public int IdentityNumber { get; set; }
         public City City { get; set; }
         public int CityId { get; set; }
         public Gender Gender { get; set; }

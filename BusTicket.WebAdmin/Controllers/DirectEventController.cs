@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace BusTicket.WebAdmin.Controllers
 {
+    [NonController]
     public class DirectEventController : Controller
     {
         public IActionResult Index()
@@ -19,6 +20,7 @@ namespace BusTicket.WebAdmin.Controllers
             return View();
         }
 
+        [NonAction]
         public IActionResult ButtonClick()
         {
             var msg = $"Server Time is { DateTime.Now.ToString("H:mm:ss tt") } :+1:";

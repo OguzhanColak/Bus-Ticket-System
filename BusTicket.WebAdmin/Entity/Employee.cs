@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusTicket.WebAdmin.Entity
 {
+    #region şuan devre dışı
     public class Employee
     {
         public int EmployeeId { get; set; }
@@ -20,4 +21,5 @@ namespace BusTicket.WebAdmin.Entity
         public string Password { get; set; }
         public bool IsDeleted { get; set; }
     }
+    #endregion
 }

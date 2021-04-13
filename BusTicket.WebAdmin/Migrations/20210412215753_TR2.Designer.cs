@@ -4,14 +4,16 @@ using BusTicket.WebAdmin.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BusTicket.WebAdmin.Migrations
 {
     [DbContext(typeof(BusTicketContext))]
-    partial class BusTicketContextModelSnapshot : ModelSnapshot
+    [Migration("20210412215753_TR2")]
+    partial class TR2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

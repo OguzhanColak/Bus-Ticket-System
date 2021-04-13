@@ -14,7 +14,7 @@ namespace BusTicket.WebAdmin.Data
         public DbSet<Bus> Buses { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Employee> Employees { get; set; }
+        //public DbSet<Employee> Employees { get; set; }
         public DbSet<Route> Routes { get; set; }
         public DbSet<SystemUser> SystemUsers { get; set; }
         public DbSet<Ticket> Tickets { get; set; }

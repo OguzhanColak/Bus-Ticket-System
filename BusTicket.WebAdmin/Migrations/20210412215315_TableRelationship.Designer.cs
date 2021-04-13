@@ -4,14 +4,16 @@ using BusTicket.WebAdmin.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BusTicket.WebAdmin.Migrations
 {
     [DbContext(typeof(BusTicketContext))]
-    partial class BusTicketContextModelSnapshot : ModelSnapshot
+    [Migration("20210412215315_TableRelationship")]
+    partial class TableRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -226,7 +228,7 @@ namespace BusTicket.WebAdmin.Migrations
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RouteId")
+                    b.Property<int>("RouteId")
                         .HasColumnType("int");
 
                     b.Property<int>("SeatNumber")
@@ -307,7 +309,9 @@ namespace BusTicket.WebAdmin.Migrations
 
                     b.HasOne("BusTicket.WebAdmin.Entity.Route", "Route")
                         .WithMany("Tickets")
-                        .HasForeignKey("RouteId");
+                        .HasForeignKey("RouteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Customer");
 

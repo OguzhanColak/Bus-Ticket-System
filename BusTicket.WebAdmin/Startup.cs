@@ -80,7 +80,7 @@ namespace BusTicket.WebAdmin
             {
                 app.UseDeveloperExceptionPage();
                 app.UseLiveReload();
-                DataSeeding.Seed(app);
+                //DataSeeding.Seed(app);
             }
             else
             {
