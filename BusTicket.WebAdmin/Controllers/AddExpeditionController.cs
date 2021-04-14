@@ -22,6 +22,12 @@ namespace BusTicket.WebAdmin.Controllers
             return this.Direct();
         }
 
+        [HttpPost]
+        public IActionResult getCityValues(int city)
+        {
+            var cityName = city;
+            return Content("sadasdasdadadsadsada");
+        }
     
     }
 }

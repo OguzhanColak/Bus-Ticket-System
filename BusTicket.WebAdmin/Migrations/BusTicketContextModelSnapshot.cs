@@ -251,7 +251,7 @@ namespace BusTicket.WebAdmin.Migrations
                     b.HasOne("BusTicket.WebAdmin.Entity.City", "City")
                         .WithMany("Customers")
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("City");
@@ -262,7 +262,7 @@ namespace BusTicket.WebAdmin.Migrations
                     b.HasOne("BusTicket.WebAdmin.Entity.Route", "Route")
                         .WithMany()
                         .HasForeignKey("RouteId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Route");
@@ -277,7 +277,7 @@ namespace BusTicket.WebAdmin.Migrations
                     b.HasOne("BusTicket.WebAdmin.Entity.Bus", "Bus")
                         .WithMany()
                         .HasForeignKey("BusId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusTicket.WebAdmin.Entity.City", "DepartureCity")
@@ -296,13 +296,13 @@ namespace BusTicket.WebAdmin.Migrations
                     b.HasOne("BusTicket.WebAdmin.Entity.Customer", "Customer")
                         .WithMany()
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusTicket.WebAdmin.Entity.Employee", "Employee")
                         .WithMany()
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("BusTicket.WebAdmin.Entity.Route", "Route")

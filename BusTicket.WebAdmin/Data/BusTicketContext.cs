@@ -11,6 +11,19 @@ namespace BusTicket.WebAdmin.Data
     {
         public BusTicketContext(DbContextOptions options) : base(options) { }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // ...
+
+            var cascadeFKs = modelBuilder.Model.GetEntityTypes()
+                .SelectMany(t => t.GetForeignKeys())
+                .Where(fk => !fk.IsOwnership && fk.DeleteBehavior == DeleteBehavior.Cascade);
+
+            foreach (var fk in cascadeFKs)
+                fk.DeleteBehavior = DeleteBehavior.Restrict;
+            
+            base.OnModelCreating(modelBuilder);
+        }
         public DbSet<Bus> Buses { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Customer> Customers { get; set; }

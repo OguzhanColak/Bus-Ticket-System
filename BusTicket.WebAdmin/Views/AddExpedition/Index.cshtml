@@ -10,12 +10,14 @@
         SegmentedButton Variations - Ext.NET Examples
     </title>
     <link href="/resources/css/examples.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
     <h1>
         Sefer Ekle
     </h1>
-    
+
     <ext-container layout="Form">
         <items>
             <ext-fieldContainer fieldLabel="Otobüsün kalkacağı il">
@@ -24,14 +26,14 @@
                         <items>
                             <ext-comboBox id="selam">
                                 @*<DirectEvents>
-                                    <Select>
-                                        <EventMask ShowMask="true"></EventMask>
-                                    </Select>
-                                </DirectEvents>*@
+                                        <Select>
+                                            <EventMask ShowMask="true"></EventMask>
+                                        </Select>
+                                    </DirectEvents>*@
                                 <Items>
                                     <ext-listItem Value="0" Text="Edirne">
-                                    <ext-listItem Value="1" Text="İstanbul">
-                                    <ext-listItem Value="2" Text="Ankara">
+                                        <ext-listItem Value="1" Text="İstanbul">
+                                            <ext-listItem Value="2" Text="Ankara">
                                 </Items>
                             </ext-comboBox>
                         </items>
@@ -44,15 +46,15 @@
                     <ext-segmentedButton allowToggle="false">
                         <items>
                             <ext-comboBox>
-                                <DirectEvents>
+                                @*<DirectEvents>
                                     <Select>
                                         <EventMask ShowMask="true"></EventMask>
                                     </Select>
-                                </DirectEvents>
+                                </DirectEvents>*@
                                 <Items>
                                     <ext-listItem Value="0" Text="Edirne">
-                                    <ext-listItem Value="1" Text="İstanbul">
-                                    <ext-listItem Value="2" Text="Ankara">
+                                        <ext-listItem Value="1" Text="İstanbul">
+                                            <ext-listItem Value="2" Text="Ankara">
                                 </Items>
                             </ext-comboBox>
                         </items>
@@ -64,9 +66,25 @@
     </ext-container>
 
 
+@*<form method="post" asp-controller="AddExpedition" asp-action="getCityValues">
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>Ankara</option>
+            <option>İstanbul</option>
+            <option>izmir</option>
+            <option>Edirne</option>
+            <option>Sivas</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>*@
 
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
 
