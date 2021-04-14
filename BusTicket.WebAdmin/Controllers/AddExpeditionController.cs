@@ -21,5 +21,7 @@ namespace BusTicket.WebAdmin.Controllers
 
             return this.Direct();
         }
+
+    
     }
 }

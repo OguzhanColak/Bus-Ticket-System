@@ -15,51 +15,61 @@
     <h1>
         Sefer Ekle
     </h1>
-
-    <ext-container layout="Form" >
+    
+    <ext-container layout="Form">
         <items>
             <ext-fieldContainer fieldLabel="Otobüsün kalkacağı il">
                 <items>
                     <ext-segmentedButton allowToggle="false">
                         <items>
-
-                            <ext-button text="Kalkış İli">
-                                <menu>
-                                    <ext-menu plain="true">
-                                        <items>
-                                            <ext-menuItem text="Edirne" onDirectClick="merhaba" />
-                                            <ext-menuItem text="İstanbul" />
-                                            <ext-menuItem text="Ankara" />
-                                        </items>
-                                    </ext-menu>
-                                </menu>
-                            </ext-button>
+                            <ext-comboBox id="selam">
+                                @*<DirectEvents>
+                                    <Select>
+                                        <EventMask ShowMask="true"></EventMask>
+                                    </Select>
+                                </DirectEvents>*@
+                                <Items>
+                                    <ext-listItem Value="0" Text="Edirne">
+                                    <ext-listItem Value="1" Text="İstanbul">
+                                    <ext-listItem Value="2" Text="Ankara">
+                                </Items>
+                            </ext-comboBox>
                         </items>
                     </ext-segmentedButton>
                 </items>
             </ext-fieldContainer>
-            
+
             <ext-fieldContainer fieldLabel="Otobüsün varacağı il">
                 <items>
                     <ext-segmentedButton allowToggle="false">
                         <items>
-
-                            <ext-button text="Varış İli">
-                                <menu>
-                                    <ext-menu plain="true">
-                                        <items>
-                                            <ext-menuItem text="Edirne" onDirectClick="merhaba" />
-                                            <ext-menuItem text="İstanbul" />
-                                            <ext-menuItem text="Ankara" />
-                                        </items>
-                                    </ext-menu>
-                                </menu>
-                            </ext-button>
+                            <ext-comboBox>
+                                <DirectEvents>
+                                    <Select>
+                                        <EventMask ShowMask="true"></EventMask>
+                                    </Select>
+                                </DirectEvents>
+                                <Items>
+                                    <ext-listItem Value="0" Text="Edirne">
+                                    <ext-listItem Value="1" Text="İstanbul">
+                                    <ext-listItem Value="2" Text="Ankara">
+                                </Items>
+                            </ext-comboBox>
                         </items>
                     </ext-segmentedButton>
                 </items>
             </ext-fieldContainer>
         </items>
+
     </ext-container>
+
+
+
+
+
 </body>
 </html>
+
+
+
+
