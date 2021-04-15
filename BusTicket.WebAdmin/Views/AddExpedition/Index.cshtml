@@ -1,4 +1,4 @@
-﻿@model BusTicket.WebAdmin.Models.GridPanelModel
+﻿@model BusTicket.WebAdmin.Entity.Route
 @{
     Layout = null;
 }
@@ -66,20 +66,29 @@
     </ext-container>
 
 
-@*<form method="post" asp-controller="AddExpedition" asp-action="getCityValues">
-
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-            <option>Ankara</option>
-            <option>İstanbul</option>
-            <option>izmir</option>
-            <option>Edirne</option>
-            <option>Sivas</option>
-        </select>
-    </div>
-    <button type="submit" class="btn btn-primary">Kaydet</button>
-</form>*@
+    <form method="post" asp-controller="AddExpedition" asp-action="getCityValues">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Kalkış İli:</label>
+            <select class="form-control" name="Dcity">
+                <option>Ankara</option>
+                <option>İstanbul</option>
+                <option>İzmir</option>
+                <option>Edirne</option>
+                <option>Sivas</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Varış İli:</label>
+            <select class="form-control" name="Acity">
+                <option>Ankara</option>
+                <option>İstanbul</option>
+                <option>İzmir</option>
+                <option>Edirne</option>
+                <option>Sivas</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+    </form>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusTicket.WebAdmin.Entity
 {
-    public class Customer
+    public class Customer 
     {
         public int CustomerId { get; set; }
         public int IdentityNumber { get; set; }

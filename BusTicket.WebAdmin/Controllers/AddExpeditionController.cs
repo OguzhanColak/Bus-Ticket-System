@@ -23,9 +23,13 @@ namespace BusTicket.WebAdmin.Controllers
         }
 
         [HttpPost]
-        public IActionResult getCityValues(int city)
+        public IActionResult getCityValues(Entity.Route route)
         {
-            var cityName = city;
+            var cityName = route;
+            var dcity = Request.Form["Dcity"];
+            var acity = Request.Form["Acity"];
+            //var 
+
             return Content("sadasdasdadadsadsada");
         }
     
