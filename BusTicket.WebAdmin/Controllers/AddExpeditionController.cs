@@ -18,7 +18,6 @@ namespace BusTicket.WebAdmin.Controllers
         public IActionResult merhaba()
         {
             this.X().Toast(Mojee.Replace("Menü Item'a tıklandı!1!11"));
-
             return this.Direct();
         }
 
@@ -28,10 +27,8 @@ namespace BusTicket.WebAdmin.Controllers
             var cityName = route;
             var dcity = Request.Form["Dcity"];
             var acity = Request.Form["Acity"];
-            //var 
-
+            
             return Content("sadasdasdadadsadsada");
         }
-    
     }
 }
