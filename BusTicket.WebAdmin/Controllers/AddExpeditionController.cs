@@ -1,4 +1,5 @@
-﻿using Ext.Net.Core;
+﻿using BusTicket.WebAdmin.Data;
+using Ext.Net.Core;
 using Microsoft.AspNetCore.Mvc;
 using MojeeIO;
 using System;
@@ -10,6 +11,13 @@ namespace BusTicket.WebAdmin.Controllers
 {
     public class AddExpeditionController : Controller
     {
+        private readonly BusTicketContext _context;
+        public AddExpeditionController(BusTicketContext context)
+        {
+            _context = context;
+        }
+
+
         public IActionResult Index()
         {
             return View();
@@ -17,7 +25,7 @@ namespace BusTicket.WebAdmin.Controllers
 
         public IActionResult merhaba()
         {
-            this.X().Toast(Mojee.Replace("Menü Item'a tıklandı!1!11"));
+            this.X().Toast(Mojee.Replace("Sefer eklendi."));
             return this.Direct();
         }
 
@@ -27,8 +35,14 @@ namespace BusTicket.WebAdmin.Controllers
             var cityName = route;
             var dcity = Request.Form["Dcity"];
             var acity = Request.Form["Acity"];
-            
-            return Content("sadasdasdadadsadsada");
+
+            _context.Routes.Add(route);
+            _context.SaveChanges();
+
+
+
+
+            return RedirectToAction("merhaba");
         }
     }
 }
