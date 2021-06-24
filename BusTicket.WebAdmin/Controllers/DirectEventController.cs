@@ -1,6 +1,4 @@
 ﻿using BusTicket.WebAdmin.Models;
-using Ext.Net;
-using Ext.Net.Core;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MojeeIO;
@@ -25,9 +23,7 @@ namespace BusTicket.WebAdmin.Controllers
         {
             var msg = $"Server Time is { DateTime.Now.ToString("H:mm:ss tt") } :+1:";
 
-            this.X().Toast(Mojee.Replace(msg));
-
-            return this.Direct();
+            return View();
         }
     }
 }

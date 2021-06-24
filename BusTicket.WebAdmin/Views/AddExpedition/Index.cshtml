@@ -18,80 +18,26 @@
     <h1>
         Sefer Ekle
     </h1>
-   
-    <!--#region EXT.NET Form  -->
-    <!--<ext-container layout="Form">
-        <items>
-            <ext-fieldContainer fieldLabel="Otobüsün kalkacağı il">
-                <items>
-                    <ext-comboBox id="selam">-->
-    @*<DirectEvents>
-            <Select>
-                <EventMask ShowMask="true"></EventMask>
-            </Select>
-        </DirectEvents>*@
-    <!--<Items>
-                            <ext-listItem Value="0" Text="Edirne">
-                                <ext-listItem Value="1" Text="İstanbul">
-                                    <ext-listItem Value="2" Text="Ankara">
-                        </Items>
-            </ext-comboBox>
-            <ext-button text="Gönder">
-                <directEvents>
-                    <click actionName="getCityValues">
-                        <extraParams></extraParams>
-                    </click>
-                </directEvents>
-            </ext-button>
-        </items>
-
-    </ext-fieldContainer>
-
-    <ext-fieldContainer fieldLabel="Otobüsün varacağı il">
-        <items>
-            <ext-segmentedButton allowToggle="false">
-                <items>
-                    <ext-comboBox>-->
-    @*<DirectEvents>
-            <Select>
-                <EventMask ShowMask="true"></EventMask>
-            </Select>
-        </DirectEvents>*@
-    <!--<Items>
-                                    <ext-listItem Value="0" Text="Edirne">
-                                        <ext-listItem Value="1" Text="İstanbul">
-                                            <ext-listItem Value="2" Text="Ankara">
-                                </Items>
-                            </ext-comboBox>
-                        </items>
-                    </ext-segmentedButton>
-                </items>
-            </ext-fieldContainer>
-        </items>
-
-    </ext-container>-->
-    <!--#endregion -->
-
 
     <form method="post" asp-controller="AddExpedition" asp-action="getCityValues">
         <div class="form-group">
             <label for="exampleFormControlSelect1">Kalkış İli:</label>
             <select class="form-control" name="DepartureCityId" asp-for="DepartureCityId">
-                <option>Ankara</option>
-                <option>İstanbul</option>
-                <option>İzmir</option>
-                <option>Edirne</option>
-                <option>Sivas</option>
+                <option value="1">Ankara</option>
+                <option value="2">İstanbul</option>
+                <option value="3">İzmir</option>
+                <option value="4">Edirne</option>
+                <option value="5">Sivas</option>
             </select>
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Varış İli:</label>
             <select class="form-control" name="ArrivalCityId" asp-for="ArrivalCityId">
-                <option>Ankara</option>
-                <option>İstanbul</option>
-                <option>İzmir</option>
-                <option>Edirne</option>
-                <option>Sivas</option>
+                <option value="1">Ankara</option>
+                <option value="2">İstanbul</option>
+                <option value="3">İzmir</option>
+                <option value="4">Edirne</option>
+                <option value="5">Sivas</option>
             </select>
         </div>
         <div class="form-group">
@@ -104,14 +50,14 @@
                 <option>5</option>
             </select>
         </div>
-        <div class="form-group">
+        @*<div class="form-group">
             <label for="exampleFormControlSelect1">Kalkış Vakti:</label>
-
+            
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">Varış Vakti:</label>
 
-        </div>
+        </div>*@
         <input type="number" name="TicketFee" asp-for="Tickets" class="form-control mb-5" />
         <button type="submit" class="btn btn-primary">Sefer Ekle</button>
     </form>

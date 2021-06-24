@@ -1,5 +1,5 @@
-﻿using BusTicket.WebAdmin.Data;
-using Ext.Net.Core;
+﻿using BusTicket.DataAccess.Concrete.EntityFramework;
+using BusTicket.WebAdmin.Data;
 using Microsoft.AspNetCore.Mvc;
 using MojeeIO;
 using System;
@@ -25,19 +25,55 @@ namespace BusTicket.WebAdmin.Controllers
 
         public IActionResult merhaba()
         {
-            this.X().Toast(Mojee.Replace("Sefer eklendi."));
-            return this.Direct();
+            return View("<h1>Sefer başarıyla eklendi.</h1>");
         }
 
         [HttpPost]
         public IActionResult getCityValues(Entity.Route route)
         {
-            var cityName = route;
-            var dcity = Request.Form["Dcity"];
-            var acity = Request.Form["Acity"];
+            //var cityName = route;
+            //var dcity = Request.Form["Dcity"];
+            //var acity = Request.Form["Acity"];
 
-            _context.Routes.Add(route);
-            _context.SaveChanges();
+            #region Silme
+
+            var entity = _context.Routes.Find(6);
+            //_context.Routes.Remove(entity);
+            //_context.SaveChanges();
+
+            #endregion
+
+
+            var newBus = new Entity.Bus
+            {
+                IsDeleted = false,
+                RegistrationPlate = "34 AGY 546",
+                SeatCount = 42
+            };
+
+            //_context.Buses.Add(newBus);
+            //_context.SaveChanges();
+
+
+
+            var newCity = new Entity.City { CityName = "Edirne" };
+            var newCity2 = new Entity.City { CityName = "İstanbul" };
+            var cityList = new List<Entity.City> { newCity, newCity2 };
+
+            //_context.Cities.AddRange(cityList);
+            //_context.SaveChanges();
+
+            var newRoute = new Entity.Route
+            {
+                ArrivalCityId = 1,
+                ArrivalTime = DateTime.Now,
+                BusId = 1,
+                DepartureCityId = 2,
+                DepartureTime = DateTime.Now,
+            };
+
+            //_context.Routes.Add(newRoute);
+            //_context.SaveChanges();
 
 
 

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusTicket.WebAdmin.Data
 {
-    public class BusTicketContext : DbContext
+    public class BusTicketContext /*: DbContext*/
     {
         public BusTicketContext(DbContextOptions options) : base(options) { }
 

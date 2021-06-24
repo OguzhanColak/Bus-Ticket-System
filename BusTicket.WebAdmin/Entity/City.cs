@@ -14,6 +14,6 @@ namespace BusTicket.WebAdmin.Entity
         public ICollection<Route> DepartureCityId { get; set; }
         [InverseProperty("ArrivalCity")]
         public ICollection<Route> ArrivalCityId { get; set; }
-        public List<Customer> Customers { get; set; }
+        public List<Customer> Customers { get; set; } 
     }
 }
