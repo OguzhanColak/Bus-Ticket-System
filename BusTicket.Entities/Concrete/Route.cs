@@ -19,7 +19,6 @@ namespace BusTicket.Entities.Concrete
         [ForeignKey("ArrivalCity")]
         public int? ArrivalCityId { get; set; }
         public City ArrivalCity { get; set; } //VarışŞehirId
-
         public List<Ticket> Tickets { get; set; }
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }

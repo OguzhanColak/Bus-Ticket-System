@@ -1,6 +1,7 @@
 ﻿using BusTicket.Business.Abstract;
 using BusTicket.DataAccess.Abstract;
 using BusTicket.Entities.Concrete;
+using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,13 +17,13 @@ namespace BusTicket.Business.Concrete
         {
             _ticketDal = ticketDal;
         }
-        public List<Ticket> GetAll()
+        public IDataResult<List<Ticket>> GetAll()
         {
-            return _ticketDal.GetAll();
+            return new SuccessDataResult<List<Ticket>>(_ticketDal.GetAll());
         }
-        public List<Ticket> GetAllByRouteId(int id)
+        public IDataResult<List<Ticket>> GetAllByRouteId(int id)
         {
-            return _ticketDal.GetAll(x => x.RouteId == id);
+            return new SuccessDataResult<List<Ticket>>(_ticketDal.GetAll(x => x.RouteId == id));
         }
     }
 }
