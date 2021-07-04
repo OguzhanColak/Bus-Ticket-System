@@ -1,4 +1,5 @@
-﻿using BusTicket.Entities.Concrete;
+﻿using BusTicket.Core.Utilities;
+using BusTicket.Entities.Concrete;
 using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
@@ -8,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace BusTicket.Business.Abstract
 {
-    interface ITicketService
+    public interface ITicketService
     {
         IDataResult<List<Ticket>> GetAll();
-        IDataResult<List<Ticket>> GetAllByRouteId(int id);
-
+        IDataResult<Ticket> GetAllByRouteId(int id);
+        IResult Add(Ticket ticket);
     }
 }

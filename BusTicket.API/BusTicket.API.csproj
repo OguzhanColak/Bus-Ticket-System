@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusTicket.Business\BusTicket.Business.csproj" />
+    <ProjectReference Include="..\BusTicket.Core\BusTicket.Core.csproj" />
+    <ProjectReference Include="..\BusTicket.DataAccess\BusTicket.DataAccess.csproj" />
+    <ProjectReference Include="..\BusTicket.Entities\BusTicket.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
