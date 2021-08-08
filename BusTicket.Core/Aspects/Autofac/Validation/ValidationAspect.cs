@@ -1,6 +1,6 @@
-﻿using Castle.DynamicProxy;
-using Core.CrossCuttingConcerns.Validation;
-using Core.Utilities.Interceptors;
+﻿using BusTicket.Core.CrossCuttingConcerns.Validation;
+using BusTicket.Core.Utilities.Interceptors;
+using Castle.DynamicProxy;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Aspects.Autofac.Validation
+namespace BusTicket.Core.Aspects.Autofac.Validation
 {
     public class ValidationAspect : MethodInterception
     {

@@ -1,7 +1,7 @@
 ﻿using BusTicket.Entities.Concrete;
 using FluentValidation;
 
-namespace Business.ValidationRules.FluentValidation
+namespace BusTicket.Business.ValidationRules.FluentValidation
 {
     public class TicketValidator : AbstractValidator<Ticket>
     {

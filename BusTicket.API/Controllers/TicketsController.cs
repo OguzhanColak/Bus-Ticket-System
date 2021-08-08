@@ -22,12 +22,6 @@ namespace BusTicket.API.Controllers
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            #region reflection
-            var type = typeof(falan);
-
-            falan falan = (falan)Activator.CreateInstance(type);
-            #endregion
-
             var result = _ticketService.GetAll();
 
             if (result.Success)
@@ -59,16 +53,6 @@ namespace BusTicket.API.Controllers
                 return Ok(result);
             }
             return BadRequest(result);
-        }
-    }
-
-    public class falan
-    {
-        public int MyProperty { get; set; }
-
-        public string blaa()
-        {
-            return "";
         }
     }
 }

@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace BusTicket.Business.Abstract
 {
-    public interface ITicketService
+    public interface ICustomerService
     {
-        IDataResult<List<Ticket>> GetAll();
-        IDataResult<Ticket> GetAllByRouteId(int id);
-        IResult Add(Ticket ticket);
+        IDataResult<List<Customer>> GetAll();
+        IDataResult<Customer> GetById(int id);
+        IResult Add(Customer customer);
     }
 }
